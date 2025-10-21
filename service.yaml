@@ -1,12 +1,13 @@
+apiVersion: v1
 kind: Service
 metadata:
-  name: kubedemoapp-service
+  name: mycontainer
 spec:
   selector:
-    app: kubedemoapp
+    app: mycontainer
+  type: NodePort
   ports:
     - protocol: TCP
-      port: 5000
-      targetPort: 5000
-      nodePort: 30080
-  type: NodePort
+      port: 5000        # internal service port
+      targetPort: 5000  # container port
+      nodePort: 30726   # NodePort to access externally
