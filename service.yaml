@@ -10,4 +10,4 @@ spec:
     - protocol: TCP
       port: 5000        # internal service port
       targetPort: 5000  # container port
-      nodePort: 30726   # NodePort to access externally
+      nodePort: 30727   # NodePort to access externally
